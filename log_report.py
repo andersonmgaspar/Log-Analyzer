@@ -56,6 +56,7 @@ def make_query(query):
             cursor.close()
             connection.close()
 
+
 def show_results(query_statement, query):
     results = make_query(query)
     print("")
@@ -66,9 +67,11 @@ def show_results(query_statement, query):
         print(author + " with " + result_views + " views.")
     print("")
 
-show_results("What are the most popular three articles of all time? ", top3_articles)
-show_results("Who are the most popular article authors of all time? ", popular_authors)
+show_results("What are the most popular three articles of all time? ",
+             top3_articles)
+show_results("Who are the most popular article authors of all time? ",
+             popular_authors)
 errors = make_query(error_count)
 print("On which days more than 1% of the requests led to error?")
 print(str(errors[0][0]) + " - " + str(errors[0][1]) + "%")
-#show_results("Dates with access problems: ", error_count)
+# show_results("Dates with access problems: ", error_count)
