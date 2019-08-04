@@ -39,6 +39,9 @@ psql -d news -f newsdata.sql
 
 ### Creating Views
 
+Views are automatically created by the `log_report.py` script. This steps are deprecated
+
+
 In order to run some queries I had to create two views in PostgreSQL. This was made
 to simplify the complexity of the question number 3. To create them you need to
 access the virtual machine using the vagrant ssh command, and then access the psql news
